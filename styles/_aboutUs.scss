@@ -1,0 +1,48 @@
+.viewSection.aboutUs{
+    position: relative;
+    overflow: hidden;
+    background-color: $bright;
+    @include flexCenterSA(row);
+
+    
+}
+
+.aboutUs__decorationTop{
+    width: 150vh;
+    height: 150vh;
+    background-color: $dark;
+    position:absolute;
+    transform: rotate(45deg);
+    top:-75%;
+    left:40%;
+    z-index: 1;
+    
+}
+.aboutUs__article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width:25vw;
+    height:50vh;
+    >.article__title{
+        font-size: 4rem;
+    }
+}
+
+.aboutUs__laptop{
+    width:30vw;
+    height:30vw;
+    position: relative;
+    
+    >img{
+        top:50%;
+        left:50%;
+        position:absolute;
+        z-index: 10;
+        transform: translate(-50%,-50%)
+    }
+}
+.article__button{
+    @include readMoreButton;
+}

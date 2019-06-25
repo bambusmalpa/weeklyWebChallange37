@@ -1,0 +1,52 @@
+.viewSection.services{
+    @include flexCenterSA(column);
+    position: relative;
+    overflow: hidden;
+    background-color: $secondBright;
+    
+}
+
+.services__decoration{
+    position:absolute;
+    background-color: $contrast;
+    width: 100vh;
+    height: 100vh;
+    transform: rotate(45deg);
+    left:-100vh;
+
+}
+
+.services__title{
+    font-size: 4rem;
+    text-align: center;
+    color:$dark;
+}
+
+.services__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+    width: 70vw;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    >.singleService{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+}
+.singleService__image{
+    background-color: $contrast;
+    width: 50px;
+    height: 50px;
+    border-radius:100%;
+    margin-right: 2%;
+}
+.singleService__title{
+    font-size: 2rem;
+}
