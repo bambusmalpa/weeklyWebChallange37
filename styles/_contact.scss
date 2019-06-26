@@ -1,12 +1,65 @@
 .viewSection.contact{
-    background-image:url("../images/contactSectionBackground.png");
+  
+  background-image:url("../images/contactSectionBackground.png");
   background-size:100% 100%;
   background-repeat: no-repeat;
   background-size:contain contain;
   background-attachment: fixed;
+  overflow: hidden;
+  color:$bright;
   >.contact__container{
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0,0.9)
+    position: relative;
+    z-index: 1;
+      @include flexCenterSA(column);
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0,0.9);
+    >.contact__title{
+        
+        text-align: center;
+        font-size: 3rem;
+        color:$medium;
+    }
+    >.contact__infos{
+      @include flexCenterSB(row);
+      width: 60vw;
+      >.infos__element{
+        width: 10vw;
+        font-size: 1.5rem;
+        @include flexCenterSA(row);
+        
+        >i{
+          font-size: 3rem;
+          margin-right: 5%;
+        }
+        >.infosElement__txt{
+          >h2{
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    >.contact__socials{
+      width: 40vw;
+      @include flexCenterSB(row);
+      >i{
+        font-size: 3rem;}
+    }
+    >.contact__footer{
+      border-top:2px solid $bright;
+      font-size: 1.2rem;
+    }
   }
+  
+}
+.contact__decorationBottom{
+  position: absolute;
+  width: 100vh;
+  height: 100vh;
+  background-color: $contrast;
+  top:100%;
+  left:60%;
+  transform: rotate(45deg);
+  transform-origin: center center;
+  z-index: 100;
 }

@@ -1,6 +1,7 @@
 .viewSection.clients{
     position: relative;
     overflow: hidden;
+    z-index: 10;
     >.clientsCotent__title{
         margin-top:15vh;
         text-align: center;
@@ -52,11 +53,18 @@
             height: 100%;
             @include flexCenterSB(column);
             >.text__reviev{
+                font-size: 1.5rem;
                 @include flexCenterSB(row);
+                >.reviev__description{
+                    font-size: 1.5rem;
+        
+                }
                 >.reviev__decoration{
                     font-size: 10rem;
+                   
                 }
             }
+           
             >.reviev__name{
                 font-weight: 700;
                 align-self: baseline;
@@ -68,7 +76,7 @@
                 @include flexCenterSB(row);
                 width: 25vw;
                 height: 150px;
-                
+                align-self: baseline;
 
                 >.thumbnailSlider__element{
                     width: 100px;
@@ -105,6 +113,7 @@
     top:500vh;
     transform: rotate(45deg);
     transform-origin: center center;
+    z-index: 9;
 }
 .clients__decorationTop{
     width: 50vh;
