@@ -49,18 +49,53 @@ window.addEventListener('load', function(){
     })
 
   })}
-handleCarousel();
- 
 
+ 
+const handleMainMenu=()=>{
 const mainMenu=document.querySelector(".home__header");
 const moveMenu=(e)=>{
   const links=document.querySelectorAll(".nav__link");
   if(window.pageYOffset>=mainMenu.clientHeight){
     mainMenu.classList="home__header home__header--fixed"
   }else{
-    mainMenu.classList="home__header"
+    mainMenu.classList="home__header"}}
+window.addEventListener("scroll",moveMenu)}
+
+
+const handleClientSlider=()=>{
+  
+  const slider=document.querySelector(".clientsCotent__thumbnailSlider");
+  const thumbs=document.querySelectorAll(".thumbnailSlider__element")
+  const reviev=document.querySelector(".reviev__description");
+  const revievname=document.querySelector(".reviev__name");
+  const clientImage=document.querySelector(".imageSlider")
+  const clients=[{name:"Betty Boo",function:"Betty Boo",reviev:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur animi odio aperiam mollitia libero tenetur dolor consequuntur ipsam rem ducimus neque, minima ullam molestias atque ea harum asperiores aut enim!",image:"../images/client1.png",index:0},{name:"Ammy Doe",function:"CEO",reviev:"Lorem ipsuur adipisicing elit. Consequatur animi odio aperiam mollitia libero tenetur dolor consequuntur ipsam rem ducimus neque, minima ullam molestias atque ea harum asperiores aut enim!",image:"../images/worker1.png",index:1},{name:"Mark Blue",function:"CEO",reviev:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur animi odio aperiam mollitia libero tenetur dolor consequuntur ipsam rem ducimus neque, minima ullam molestiaiores aut enim!",image:"../images/worker2.png",index:2}]
+
+  const updateClientSlider=(e)=>{
+    
+    if(e.target.dataset.index){
+      console.log(thumbs)
+      thumbs.forEach((el)=>{
+        el.classList.remove("thumbnailSlider__element--active")
+      })
+      e.target.classList.add("thumbnailSlider__element--active");
+      reviev.textContent=clients[e.target.dataset.index].reviev;
+      revievname.textContent=`${clients[e.target.dataset.index].name}, ${clients[e.target.dataset.index].function}`;
+      clientImage.style.transform=`translate(-${e.target.dataset.index*33.33}%)`
+      console.log(e.target.dataset.index*100)
+    }
+    
     
   }
 
+  slider.addEventListener("click",updateClientSlider)
+ 
 }
-window.addEventListener("scroll",moveMenu)
+
+
+
+
+
+handleCarousel();
+handleMainMenu();
+handleClientSlider();

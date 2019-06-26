@@ -4,7 +4,9 @@
     background-size: 60%, cover;
     background-position:80% 20%,center;
     background-repeat: no-repeat;
+    background-attachment: fixed, fixed;
 }
+
   
 
 .home__header{
@@ -13,7 +15,7 @@
     height: 10vh;
     color: $bright;
     transition: 0.2s;
-    
+    background-color: transparent;
     >.header__logo{
             
         font-weight: 700;
