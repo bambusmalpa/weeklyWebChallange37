@@ -16,7 +16,9 @@
     top:-75%;
     left:40%;
     z-index: 1;
-    
+    @media (max-width:1024px){
+        display: none;
+    }
 }
 .aboutUs__article{
     

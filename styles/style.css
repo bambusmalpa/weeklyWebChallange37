@@ -5,6 +5,14 @@
   background-position: 80% 20%,center;
   background-repeat: no-repeat;
   background-attachment: fixed, fixed;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .viewSection.home {
+    background-position: 90% 50%,0% 50%;
+    background-size: 0%, cover;
+  }
 }
 
 .home__header {
@@ -20,6 +28,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  z-index: 100;
   width: 100%;
   height: 10vh;
   color: #ffffff;
@@ -81,6 +91,9 @@
 }
 
 .home__header.home__header--fixed {
+  -webkit-backface-visibility: hidden;
+  top: 0;
+  left: 0;
   position: fixed;
   z-index: 100;
   background-color: #ffffff;
@@ -152,6 +165,12 @@
   top: -75%;
   left: 40%;
   z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .aboutUs__decorationTop {
+    display: none;
+  }
 }
 
 .aboutUs__article {
@@ -226,6 +245,12 @@
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   left: -100vh;
+}
+
+@media (max-width: 1024px) {
+  .services__decoration {
+    display: none;
+  }
 }
 
 .services__title {
@@ -313,7 +338,7 @@
 .viewSection.process {
   background-color: #ffffff;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .prcess__decorationTop {
@@ -329,6 +354,12 @@
           transform-origin: center center;
 }
 
+@media (max-width: 1024px) {
+  .prcess__decorationTop {
+    display: none;
+  }
+}
+
 .prcess__decorationLeft {
   position: absolute;
   width: 100vh;
@@ -340,6 +371,12 @@
           transform: rotate(45deg);
   -webkit-transform-origin: center center;
           transform-origin: center center;
+}
+
+@media (max-width: 1024px) {
+  .prcess__decorationLeft {
+    display: none;
+  }
 }
 
 .process__title {
@@ -796,6 +833,12 @@
   z-index: 9;
 }
 
+@media (max-width: 1024px) {
+  .clients__decorationLeft {
+    display: none;
+  }
+}
+
 .clients__decorationTop {
   width: 50vh;
   height: 50vh;
@@ -806,6 +849,12 @@
   top: -25%;
   left: 90%;
   z-index: 0;
+}
+
+@media (max-width: 1024px) {
+  .clients__decorationTop {
+    display: none;
+  }
 }
 
 .viewSection.contact {
@@ -927,6 +976,12 @@
   z-index: 100;
 }
 
+@media (max-width: 1024px) {
+  .contact__decorationBottom {
+    display: none;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -937,10 +992,15 @@
 
 body {
   overflow-x: hidden;
+  width: 100%;
 }
 
 .viewSection {
   width: 100%;
   height: 100vh;
+}
+
+@media (max-width: 1024px) {
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

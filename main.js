@@ -28,8 +28,6 @@ window.addEventListener('load', function(){
         slidesToShow: 1.0001,
         slidesToScroll: 1,
         rewind:true,
-       
-        draggable: true,
         
         arrows: {
             prev: '.glider-prev-center',
@@ -59,7 +57,9 @@ const moveMenu=(e)=>{
     mainMenu.classList="home__header home__header--fixed"
   }else{
     mainMenu.classList="home__header"}}
-window.addEventListener("scroll",moveMenu)}
+window.addEventListener("scroll",moveMenu)
+window.addEventListener("touchmove",moveMenu)
+}
 
 
 const handleClientSlider=()=>{
@@ -74,7 +74,7 @@ const handleClientSlider=()=>{
   const updateClientSlider=(e)=>{
     
     if(e.target.dataset.index){
-      console.log(thumbs)
+      
       thumbs.forEach((el)=>{
         el.classList.remove("thumbnailSlider__element--active")
       })
@@ -82,7 +82,7 @@ const handleClientSlider=()=>{
       reviev.textContent=clients[e.target.dataset.index].reviev;
       revievname.textContent=`${clients[e.target.dataset.index].name}, ${clients[e.target.dataset.index].function}`;
       clientImage.style.transform=`translate(-${e.target.dataset.index*33.33}%)`
-      console.log(e.target.dataset.index*100)
+      
     }
     
     
