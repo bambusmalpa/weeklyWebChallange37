@@ -50,13 +50,13 @@ window.addEventListener('load', function(){
 
  
 const handleMainMenu=()=>{
-const mainMenu=document.querySelector(".home__header");
+const mainMenu=document.querySelector(".main__header");
 const moveMenu=(e)=>{
   const links=document.querySelectorAll(".nav__link");
   if(window.pageYOffset>=mainMenu.clientHeight){
-    mainMenu.classList="home__header home__header--fixed"
+    mainMenu.classList="main__header main__header--fixed"
   }else{
-    mainMenu.classList="home__header"}}
+    mainMenu.classList="main__header"}}
 window.addEventListener("scroll",moveMenu)
 window.addEventListener("touchmove",moveMenu)
 }
@@ -92,8 +92,14 @@ const handleClientSlider=()=>{
  
 }
 
+const mainNavButton=document.querySelector(".main__menuSwich")
+const handleMainNavOn=()=>{
+  mainNavButton.classList.toggle("on");
+  const mainMenu=document.querySelector(".main__nav")
+  mainMenu.classList.toggle("off")
+}
 
-
+mainNavButton.addEventListener("click",handleMainNavOn)
 
 
 handleCarousel();
