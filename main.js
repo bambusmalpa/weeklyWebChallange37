@@ -14,7 +14,7 @@ const handleCarousel=()=>{
     slides.forEach((slide,index)=>{
         slide.className=`carousel__Element ${positions[counter][index]}`
     })
-    console.log(counter)
+   
   }
   prevButton.addEventListener("click",()=>updateSlides("prev"))
   nextButton.addEventListener("click",()=>updateSlides("next"))

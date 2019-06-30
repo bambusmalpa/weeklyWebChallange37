@@ -13,7 +13,7 @@
     @include flexCenterSB(row);
     position: relative;
     width: 90vw;
-    height: 90vh;
+    height: 70vh;
 }
 
 .carousel__Element{
@@ -44,14 +44,14 @@
         transform:perspective(1000px) translate3d(100%,-50%,0px) rotate(-45deg);
         z-index: 5;
         >img{
-            filter:blur(2px)
+            filter:blur(1px)
         }
     }
     &.left{
         transform: perspective(1000px) translate3d(-200%,-50%,0px) rotate(-45deg);;
         z-index: 2;
         >img{
-            filter:blur(2px)
+            filter:blur(1px)
         }
     }
     >.workerLabel{
@@ -75,7 +75,7 @@
         width: 50%;
         height: 10%;
         color:$bright;
-        transition: scale 1s;
+        transition: scale 3s;
         transition-delay: 1s;
     }
     &.center>.functionLabel{
