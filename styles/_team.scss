@@ -7,79 +7,101 @@
     text-align: center;
     font-size: 4rem;
 }
+
+
 .team__carousel{
-    
-  @include flexCenterSA(row);
-   font-size: 1rem;
-    width: 75vw;
-    height: 50vh;
-    margin-left: auto;
-    margin-right: auto;
-    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5))
-}
-   
-
-.glider-contain{
-    
-}
-
-.glider__buttonGroup{
-    width: 100px;
-    height: 100px;
-    background-color: $dark;
-    &.glider__buttonGroup--prev{
-        clip-path: polygon(100% 0%,50% 50%, 100% 100%);
-
-    }
-    &.glider__buttonGroup--next{
-        clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
-
-    }
-   
-
-}
-.gliderbutton{
-    display: none;
-    
-}
-.carouselElement__worker{
-    @include flexCenter(row);
+    @include flexCenterSB(row);
     position: relative;
+    width: 90vw;
+    height: 90vh;
+}
+
+.carousel__Element{
+    position: absolute;
     width: 200px;
     height: 200px;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+    transform: rotate(-45deg);
     background-color: $bright;
-    margin: 5%;
-    overflow: visible;
-   
-    &.carouselElement__worker--center{
-        position: absolute;
-        left:50%;
-        margin: 0;
-        width:400px;
-        height: 400px;
-        transform: translateX(-50%);
-        z-index: 10;
-    }
-    >.glider-contain>.glider{
-        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        width: 80%;
-        height: 80%;
-
-    }
-}
-.workerLabel{
-
-        
+    left:50%;
+    top:50%;
     @include flexCenter(row);
-    position: absolute;
-    width: 50%;
-    height: 10%;
-    color:$bright;
-    font-size: 1.2em;
-    background-color: $dark;
-    z-index: 20;
-    top:80%;
-    // clip-path: polygon(0 0, 75% 0%, 100% 100%, 25% 100%);
+    transition:1s;
+
+    >img{
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        width:120%;
+        height: 120%;
+        transform:rotate(45deg);
+    }
+    &.center{
+        transform:perspective(900px) translate3d(-35%,-40%,300px) rotate(-45deg);;
+        z-index: 10;
+        
+    }
+
+    &.right{
+        transform:perspective(1000px) translate3d(100%,-50%,0px) rotate(-45deg);
+        z-index: 5;
+        >img{
+            filter:blur(2px)
+        }
+    }
+    &.left{
+        transform: perspective(1000px) translate3d(-200%,-50%,0px) rotate(-45deg);;
+        z-index: 2;
+        >img{
+            filter:blur(2px)
+        }
+    }
+    >.workerLabel{
+        position: absolute;
+        width: 75%;
+        height: 15%;
+        background-color: $dark;
+        clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+        font-size: 1.2rem;
+        color:$bright;
+        text-align: center;
+        transform: rotate(45deg);
+        top:85%;
+        left:-25%;
+      
+    }
+    >.functionLabel{
+        clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+        position: absolute;
+        transform: rotate(45deg) scale(0);
+        width: 50%;
+        height: 10%;
+        color:$bright;
+        transition: scale 1s;
+        transition-delay: 1s;
+    }
+    &.center>.functionLabel{
+        
+           
+
+            text-align: center;
+            background-color:$contrast;
+            transform: rotate(45deg) scale(1);
+            top:100%;
+            left:-15%;
+        }
+
 }
 
+.carousel__button{
+    background-color: $dark;
+    width: 50px;
+    height: 100px;
+    &.carouselElement__button--next{
+        clip-path: polygon(0 0, 0% 100%, 100% 49%);
+
+    }
+    &.carouselElement__button--prev{
+        clip-path: polygon(0 50%, 100% 100%, 100% 0);
+
+    }
+
+}

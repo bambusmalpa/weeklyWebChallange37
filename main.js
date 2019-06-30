@@ -1,52 +1,30 @@
 
+
 const handleCarousel=()=>{
-var carouselButtons = document.querySelectorAll(".glider__buttonGroup");
+  let counter=0;
+  const positions=[["left","center","right"],["center","right","left"],["right","left","center"]]
+  const slides=document.querySelectorAll(".carousel__Element");
+  const prevButton=document.querySelector(".carouselElement__button--prev");
+  const nextButton=document.querySelector(".carouselElement__button--next");
 
-carouselButtons.forEach(group=>{
-    group.addEventListener("click",()=>{
-    const buttons=group.querySelectorAll("button");
-    buttons.forEach(el=>{
-        el.click()
+  const updateSlides=(direction)=>{
+    {direction=="next"?counter++:counter--}
+    {counter<0?counter=positions.length-1:null}
+    {counter>=positions.length?counter=0:null}
+    slides.forEach((slide,index)=>{
+        slide.className=`carousel__Element ${positions[counter][index]}`
     })
-    
-})})
+    console.log(counter)
+  }
+  prevButton.addEventListener("click",()=>updateSlides("prev"))
+  nextButton.addEventListener("click",()=>updateSlides("next"))
+}
 
 
-window.addEventListener('load', function(){
-  new Glider(document.querySelector('.glider__left'), {
-        slidesToShow: 1.0001,
-        slidesToScroll: 1,
-        scrollLock:true,
-        rewind:true,
-        Default: 0.5,
-        arrows: {
-            prev: '.glider-prev-left',
-            next: '.glider-next-left'
-          }
-    })
-   new Glider(document.querySelector('.glider__center'), {
-        slidesToShow: 1.0001,
-        slidesToScroll: 1,
-        rewind:true,
-        
-        arrows: {
-            prev: '.glider-prev-center',
-            next: '.glider-next-center'
-          }
-    })
-    new Glider(document.querySelector('.glider__right '), {
-        slidesToShow: 1.0001,
-        slidesToScroll: 1,
-        scrollLock:true,
-        Default: 0.5,
-        rewind:true,
-        arrows: {
-            prev: '.glider-prev-right',
-            next: '.glider-next-right'
-          }
-    })
 
-  })}
+
+
+
 
  
 const handleMainMenu=()=>{

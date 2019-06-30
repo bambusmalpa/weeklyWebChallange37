@@ -16,7 +16,7 @@
 <body>
         <header class="main__header">
                 <div class="main__logo">Agency</div>
-                <nav class="main__nav">
+                <nav class="main__nav off">
                     <ul class="nav__list">
                         <li class="nav__element"><a href="#home" class="nav__link">HOME</a></li>
                         <li class="nav__element"><a href="#aboutUs" class="nav__link">ABOUT US</a></li>
@@ -155,61 +155,18 @@
     <section class="viewSection team" id="team">
         <h1 class="team__title">Our creative team</h1>
 
-        <div class="team__carousel">
+       
 
-            <div class="carouselElement carouselElement__button">
-                <div class="glider__buttonGroup glider__buttonGroup--prev" id="prev">
-                    <button role="button" aria-label="Previous" class="gliderbutton glider-prev-left"></button>
-                    <button role="button" aria-label="Previous" class="gliderbutton glider-prev-center"></button>
-                    <button role="button" aria-label="Previous" class="gliderbutton glider-prev-right"></button>
-                    <div></div></div></div>
-                
-            
-                       
-        <div class="carouselElement carouselElement__worker">
-                <div class="glider-contain">
-                    <div class="glider glider__left">
-                    <div><img src="./images/worker1.png" alt=""></div>
-                    <div><img src="./images/worker2.png" alt=""></div>
-                    <div><img src="./images/worker3.png" alt=""></div> 
-                    </div>
-                </div>
-                <div class="workerLabel">John Doe</div>
-            </div>
-            <div class="carouselElement carouselElement__worker"></div>
 
-            <div class="carouselElement carouselElement__worker carouselElement__worker--center">
-                <div class="glider-contain glider-contain--center">
-                    <div class="glider glider__center">
-                    <div><img src="./images/worker2.png" alt=""></div>
-                    <div><img src="./images/worker3.png" alt=""></div>
-                    <div><img src="./images/worker1.png" alt=""></div>
-                    </div>
-                    
+                    <div class="team__carousel">
+                    <div class="carousel__button carouselElement__button--prev"></div>
+                    <div class="carousel__Element left"><img src="./images/worker1.png" alt=""><div class="workerLabel">Jimmy Doe</div><div class="functionLabel">Designer</div> </div>
+                    <div class="carousel__Element center"><img src="./images/worker2.png" alt=""><div class="workerLabel">Jane Doe</div><div class="functionLabel">Developer</div></div>
+                    <div class="carousel__Element right"><img src="./images/worker3.png" alt=""><div class="workerLabel">Tommy Doe</div><div class="functionLabel">Graphic</div></div>
+                    <div class="carousel__button carouselElement__button--next"></div>
                 </div>
-                <div class="workerLabel">John Doe</div>
-            </div>
             
-            <div class="carouselElement carouselElement__worker">
-                <div class="glider-contain">
-                    <div class="glider glider__right">
-                        <div><img src="./images/worker3.png" alt=""></div>
-                        <div><img src="./images/worker1.png" alt=""></div>
-                        <div><img src="./images/worker2.png" alt=""></div>
-                    </div>
-            </div>  
-            <div class="workerLabel">John Doe</div>
-        </div>     
-            <div class="carouselElement carouselElement__button">
-                          
-                            <div class="glider__buttonGroup glider__buttonGroup--next" id="next">
-                            <button role="button" aria-label="Next" class="gliderbutton glider-next-left"></button>
-                            <button role="button" aria-label="Next" class="gliderbutton glider-next-center"></button>
-                            <button role="button" aria-label="Next" class="gliderbutton glider-next-right"></button>
-                            <div></div>
-                        </div>
-                        </div>
-                     </div>
+     
        </section>
        <div class="decoration clients__decorationLeft"></div>
        <section class="viewSection clients" id="clients">
