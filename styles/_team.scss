@@ -63,7 +63,7 @@
         clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
         font-size: 1.2rem;
         color:$bright;
-        text-align: center;
+        @include flexCenter(row);
         transform: rotate(45deg);
         top:85%;
         left:-25%;
@@ -78,9 +78,10 @@
         color:$bright;
         transition: scale 3s;
         transition-delay: 1s;
+        @include flexCenter(row);
     }
     &.center>.functionLabel{
-            text-align: center;
+            
             background-color:$contrast;
             transform: rotate(45deg) scale(1);
             top:100%;
@@ -111,6 +112,7 @@
         height: 80vh;
     }
     .carousel__Element{
+        
         width: 30vw;
         height: 30vw;
         &.center{
@@ -118,7 +120,17 @@
         &.right{
             transform:perspective(1000px) translate3d(50%,-50%,0px) rotate(-45deg);}
         &.left{
-            transform: perspective(1000px) translate3d(-150%,-50%,0px) rotate(-45deg);}}
+            transform: perspective(1000px) translate3d(-150%,-50%,0px) rotate(-45deg);}
+        
+            >.workerLabel{
+               font-size: 0.8rem;
+            }
+            >.functionLabel{
+                font-size: 0.5rem;
+            }
+        
+        }
+         
     .carousel__button{
         align-self: flex-start;
     }

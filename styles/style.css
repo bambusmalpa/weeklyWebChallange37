@@ -642,7 +642,19 @@
           clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
   font-size: 1.2rem;
   color: #ffffff;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 85%;
@@ -662,10 +674,22 @@
   transition: scale 3s;
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .carousel__Element.center > .functionLabel {
-  text-align: center;
   background-color: #bc2e3a;
   -webkit-transform: rotate(45deg) scale(1);
           transform: rotate(45deg) scale(1);
@@ -711,6 +735,12 @@
   .carousel__Element.left {
     -webkit-transform: perspective(1000px) translate3d(-150%, -50%, 0px) rotate(-45deg);
             transform: perspective(1000px) translate3d(-150%, -50%, 0px) rotate(-45deg);
+  }
+  .carousel__Element > .workerLabel {
+    font-size: 0.8rem;
+  }
+  .carousel__Element > .functionLabel {
+    font-size: 0.5rem;
   }
   .carousel__button {
     -ms-flex-item-align: start;
