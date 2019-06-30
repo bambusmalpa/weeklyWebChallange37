@@ -3,7 +3,11 @@
     overflow: hidden;
     background-color: $bright;
     @include flexCenterSA(row);
-
+    @media (max-width:1024px){
+        flex-direction: column;
+        background-color: $dark;
+        color:$bright;
+        }
     
 }
 
@@ -28,8 +32,20 @@
     align-items: flex-start;
     width:25vw;
     height:50vh;
+    text-align: justify;
     >.article__title{
         font-size: 4rem;
+    }
+    @media (max-width:1024px){
+        width: 95vw;
+        >.article__title{
+            font-size: 4rem;
+            color:$bright;
+            align-self: center;
+        }
+        
+
+
     }
 }
 
@@ -44,8 +60,19 @@
         position:absolute;
         z-index: 10;
         transform: translate(-50%,-50%)
+
+    }
+    @media (max-width:1024px){
+        width: 100%;
+        >img{
+            width: 120%;
+        }
+
     }
 }
 .article__button{
     @include readMoreButton;
+    @media (max-width:1024px){
+        align-self: center;
+    }
 }

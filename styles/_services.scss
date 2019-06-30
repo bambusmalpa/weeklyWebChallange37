@@ -3,7 +3,10 @@
     position: relative;
     overflow: hidden;
     background-color: $secondBright;
-    
+    @media (max-width:1024px){
+        height: 300vh;
+    }
+
 }
 
 .services__decoration{
@@ -24,6 +27,9 @@
     font-size: 4rem;
     text-align: center;
     color:$dark;
+    @media (max-width:1024px){
+       margin-top: 15vh;
+    }
 }
 
 .services__container{
@@ -36,7 +42,13 @@
     height: 70%;
     margin-left: auto;
     margin-right: auto;
-    
+    @media (max-width:1024px){
+        width: 95vw;
+        height: 90%;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
     >.singleService{
         @include flexCenter(row);
         align-self: baseline;
@@ -46,6 +58,12 @@
         justify-content:space-between;
         >.singleService__description{
             width: 80%;
+        }
+        @media (max-width:1024px){
+            flex-direction: column;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
@@ -60,6 +78,9 @@
     color: $bright;
     >i{
         font-size: 2rem;
+    }
+    @media (max-width:1024px){
+        align-self: center;
     }
     
 }

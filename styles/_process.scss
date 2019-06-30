@@ -33,6 +33,7 @@
 }
 
 .process__title{
+    margin-top: 15vh;
     font-size: 3rem;
     text-align: left;
    
@@ -52,11 +53,18 @@
         @include flexCenterSB(column);
         width: 30%;
     }
+    @media (max-width:1024px){
+       
+    
+    }
 }
 .process__images{
-    width: 100%;
+    width: 50%;
     height: 60%;
     @include flexCenterSB(row);
+    @media (max-width:1024px){
+        flex-direction: column;
+     }
 }
 .singleImage{
     width: 100%;

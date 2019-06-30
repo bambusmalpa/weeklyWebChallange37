@@ -1,6 +1,7 @@
 .viewSection.team{
     background-color: $secondBright;
     @include flexCenter(column);
+    
 }
 .team__title{
    margin: 5vh;
@@ -18,8 +19,8 @@
 
 .carousel__Element{
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 15vw;
+    height: 15vw;
     box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
     transform: rotate(-45deg);
     background-color: $bright;
@@ -35,7 +36,7 @@
         transform:rotate(45deg);
     }
     &.center{
-        transform:perspective(900px) translate3d(-35%,-40%,300px) rotate(-45deg);;
+        transform:perspective(900px) translate3d(-35%,-40%,300px) rotate(-45deg);
         z-index: 10;
         
     }
@@ -79,9 +80,6 @@
         transition-delay: 1s;
     }
     &.center>.functionLabel{
-        
-           
-
             text-align: center;
             background-color:$contrast;
             transform: rotate(45deg) scale(1);
@@ -105,3 +103,23 @@
     }
 
 }
+@media (max-width:1024px){
+    .team__title{
+        margin-top:10vh;
+    }
+    .team__carousel{
+        height: 80vh;
+    }
+    .carousel__Element{
+        width: 30vw;
+        height: 30vw;
+        &.center{
+            transform:perspective(900px) translate3d(-35%,-100%,300px) rotate(-45deg);}
+        &.right{
+            transform:perspective(1000px) translate3d(50%,-50%,0px) rotate(-45deg);}
+        &.left{
+            transform: perspective(1000px) translate3d(-150%,-50%,0px) rotate(-45deg);}}
+    .carousel__button{
+        align-self: flex-start;
+    }
+    }
