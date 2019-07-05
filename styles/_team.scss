@@ -57,35 +57,36 @@
     }
     >.workerLabel{
         position: absolute;
-        width: 75%;
+        width: 90%;
         height: 15%;
         background-color: $dark;
-        clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+        clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
         font-size: 1.2rem;
         color:$bright;
         @include flexCenter(row);
         transform: rotate(45deg);
-        top:85%;
-        left:-25%;
+        top:80%;
+        left:-35%;
       
     }
     >.functionLabel{
-        clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+        clip-path: polygon(0 0, 85% 0, 100% 100%, 15% 100%);
         position: absolute;
         transform: rotate(45deg) scale(0);
-        width: 50%;
-        height: 10%;
+        width: 0%;
+        height: 0%;
         color:$bright;
-        transition: scale 3s;
-        transition-delay: 1s;
+        font-size: 0.7rem;
+        transition:height 1s;
         @include flexCenter(row);
     }
     &.center>.functionLabel{
-            
+            width: 60%;
+            height: 10%;
             background-color:$contrast;
             transform: rotate(45deg) scale(1);
-            top:100%;
-            left:-15%;
+            top:93%;
+            left:-25%;
         }
 
 }
