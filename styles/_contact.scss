@@ -50,8 +50,36 @@
       font-size: 1.2rem;
     }
   }
+  @media (max-width:762px){
+    height: 200vw;
+    >.contact__container{
+      height: 100%;
+      >.contact__infos{
+        height: 50vh;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        >.infos__element{
+          
+          width: 100%;
+        >i{
+          font-size: 3rem;
+          margin-right: 0;
+        }
+      }
+    }  >.contact__socials{
+      width: 90%;
+    }
+    >.contact__footer{
+      width: 90%;
+    }
+  }
   
+  
+  }
+ 
 }
+
 .contact__decorationBottom{
   position: absolute;
   width: 100vh;
