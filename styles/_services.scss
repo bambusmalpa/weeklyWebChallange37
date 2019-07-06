@@ -1,10 +1,14 @@
 .viewSection.services{
-    @include flexCenterSA(column);
     position: relative;
     overflow: hidden;
     background-color: $secondBright;
-    @media (max-width:1024px){
-        height: 300vh;
+    min-height: 100vh;
+    @media (max-width:1200px){
+        height: auto;
+    }
+    @media (max-width:768px){
+       
+        background: linear-gradient(135deg, $bright 0%, $bright 50%, $contrast 50%, $contrast 100%);
     }
 
 }
@@ -16,19 +20,22 @@
     height: 100vh;
     transform: rotate(45deg);
     left:-100vh;
-    @media (max-width:1024px){
+    @media (max-width:768px){
         display: none;
     }
 
 }
 
 .services__title{
-    margin-top:10vh;
+    margin-top: 15vh;
     font-size: 4rem;
     text-align: center;
     color:$dark;
     @media (max-width:1024px){
-       margin-top: 15vh;
+       
+    }
+    @media (max-width:768px){
+        color:$dark;
     }
 }
 
@@ -39,14 +46,21 @@
     grid-column-gap: 10px;
     grid-row-gap: 15px;
     width: 70vw;
-    height: 70%;
+    margin-top:5vh; 
     margin-left: auto;
     margin-right: auto;
-    @media (max-width:1024px){
+    @media (max-width:1200px){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        
+    }
+    @media (max-width:768px){
         width: 95vw;
-        height: 90%;
+        margin-bottom: 5vh;
         grid-template-columns: 1fr ;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        color:$dark;
+        
     }
 
     >.singleService{
@@ -58,6 +72,9 @@
         justify-content:space-between;
         >.singleService__description{
             width: 80%;
+        }
+        @media (max-width:1200px){
+            // color:$medium;
         }
         @media (max-width:1024px){
             flex-direction: column;
@@ -76,11 +93,16 @@
     border-radius:100%;
     margin-right: 2%;
     color: $bright;
+   
     >i{
         font-size: 2rem;
     }
     @media (max-width:1024px){
         align-self: center;
+    }
+    @media (max-width:768px){
+        
+        border:1px solid $bright;
     }
     
 }

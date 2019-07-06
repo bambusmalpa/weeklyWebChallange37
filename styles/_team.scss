@@ -105,17 +105,18 @@
     }
 
 }
-@media (max-width:1024px){
+@media (max-width:768px){
     .team__title{
         margin-top:10vh;
     }
     .team__carousel{
-        height: 80vh;
+        height: 80%;
+        margin-top:30vh;
     }
     .carousel__Element{
         
-        width: 30vw;
-        height: 30vw;
+        width: 25vw;
+        height: 25vw;
         &.center{
             transform:perspective(900px) translate3d(-35%,-100%,300px) rotate(-45deg);}
         &.right{
